@@ -1,33 +1,33 @@
-# Instruções
+# Instruções de Configuração e Execução
 
 Siga estes passos para configurar e rodar o script em sua máquina local:
 
 ### Requisitos
 
-1.<strong>Node.js instalado</strong>: Verifique se o Node.js já está instalado. Para fazer essa verificação você pode executar no terminal o comando:
+1.<strong>Node.js</strong>: Antes de iniciar, certifique-se de que o Node.js está instalado em sua máquina. Para confirmar, execute o seguinte comando no terminal:
 ```
 node -v
 ```
-Se o Node.js não estiver devidamente instalado, você pode baixá-lo e instalá-lo [Neste Link Oficial](https://nodejs.org/)
+Caso o Node.js não esteja instalado, você pode baixá-lo e configurá-lo através do [site oficial](https://nodejs.org/)
 
-### Configuração
+### Passos para Configuração
 
-1. <strong>Faça um clone do repositório:</strong> Clone este repositório em sua máquina local usando o comando:
+1. <strong>Clone o repositório:</strong> Para começar, clone este repositório em seu ambiente local utilizando o comando abaixo:
 ```
 git clone https://github.com/camargojp/MaisPrati
 ```
-2. <strong>Navegue até o diretório do projeto:</strong> Acesse o diretório do repositório clonado:
+2. <strong>Acesse o diretório do projeto:</strong> Navegue até o diretório do repositório recém-clonado com o comando:
 ```
 cd nome-do-repositorio
 ```
 ## Como Executar o script
 
-1. <strong>Instale as dependências:</strong> Este script utiliza o módulo `prompt-sync` para capturar entradas do usuário no terminal. Caso não esteja incluído no repositório, instale-o com:
+1. <strong>Instale as dependências:</strong>Este projeto utiliza o módulo prompt-sync para capturar entradas do usuário diretamente pelo terminal. Se o módulo não estiver presente no repositório, instale-o com o comando:
 ```
 npm install prompt-sync
 ```
-2. <strong>Execute o script:</strong> Execute o script com o comando:
+2. <strong>Execute o script:</strong> Com tudo configurado, você pode rodar o script utilizando o comando:
 ```
 node nome-do-arquivo.js
 ```
-Onde `nome-do-arquivo.js` é o nome do arquivo que contém o código do exercício que deseja executar.
+Substitua `nome-do-arquivo.js` pelo nome do arquivo específico que deseja executar.
