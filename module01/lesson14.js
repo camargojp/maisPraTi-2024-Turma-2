@@ -53,6 +53,52 @@ class LinkedList {
         this.size++
     }
 
+    removeFrom(index){
+        if(index < 0 || index > this.size){
+            return console.log('Index fora dos limites!')
+        }
+
+        let current = this.head
+        let previous
+
+        if(index === 0){
+            this.head = current.next
+        } else {
+            for(let i = 0; i < index; i++){
+                previous = current
+                current = current.next
+            }
+
+            previous.next = current.next
+        }
+
+        this.size--
+        return current.data
+    }
+
+    indexOf(data) {
+        let current = this.head
+        let index = 0
+
+        while(current !== null){
+            if(current.data === data){
+                return index
+            }
+            index++
+            current = current.next
+        }
+
+        return -1
+    }
+
+    isEmpty() {
+        return this.size === 0
+    }
+
+    sizeOfList() {
+        return this.size
+    }
+
     printList() {
         let current = this.head
         while(current !== null){
@@ -64,8 +110,13 @@ class LinkedList {
 
 let list = new LinkedList()
 
-list.add("Formação +praTi")
-list.add(true)
+list.add("Elemento 0")
+list.add("Elemento 1")
+list.add("Elemento 2")
 list.add("Elemento 3")
-list.insertAt("Novo elemento", 2)
+
+console.log(list.indexOf("Elemento 3"))
+list.removeFrom(1)
 list.printList()
+
+console.log(list.sizeOfList())
