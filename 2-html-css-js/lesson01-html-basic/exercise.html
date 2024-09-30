@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando HTML e CSS simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        
+    </style>
+</head>
+<body>
+<header>
+    <h1>Bem-vindo ao Registro de Usuário</h1>
+</header>
+
+<nav>
+    <a href="#registro">Registro</a>
+    <a href="#informacoes">Informações</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section>
+    <h2>Formulário de Registro</h2>
+    <form>
+        <label for="nome">Nome:</label><br>
+        <input type="text" required><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" required><br><br>
+
+        <label for="senha">Senha:</label><br>
+        <input type="password" required><br><br>
+
+        <input type="submit" value="Registrar">
+    </form>
+</section>
+
+<section>
+    <h2>Informações</h2>
+    <p>Por favor, preencha o formulário acima para se registrar em nosso site.</p>
+
+    <h3>Benefícios do Registro:</h3>
+    <ul>
+        <li>Acesso a conteúdos exclusivos</li>
+        <li>Receber atualizações por e-mail</li>
+        <li>Participar de promoções e sorteios</li>
+    </ul>
+
+    <h3>Tabela de Recursos:</h3>
+    <table>
+        <tr>
+            <th>Recursos</th>
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td>Acesso 24/7</td>
+            <td>Acesse nosso site a qualquer hora.</td>
+        </tr>
+        <tr>
+            <td>Suporte ao Cliente</td>
+            <td>Suporte disponível para ajudar você.</td>
+        </tr>
+    </table>
+</section>
+
+<footer>
+    <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+</footer>
+    
+</body>
+</html>
