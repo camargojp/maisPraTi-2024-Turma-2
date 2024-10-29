@@ -112,7 +112,7 @@ main {
 }
 
 section {
-    flex: 3;    
+    flex: 0 0 70%;    
     padding: 1.5rem;    
 }
 
@@ -165,7 +165,7 @@ section h2 {
 }
 
 aside {
-    flex: 1;
+    flex: 0 0 30%;
     background-color: #f4f4f4;
     padding: 1.5rem;
     border-radius: 5px;
