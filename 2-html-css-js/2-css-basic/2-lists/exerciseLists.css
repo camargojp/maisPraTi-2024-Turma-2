@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.minhaLista {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.minhaLista li {
+    background-color: lightgray;
+    color: blue;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.minhaLista li:hover {
+    background-color: gray;
+}
+
+.minhaLista > .ultimoItem {
+    color: green;
+    font-style: italic;
+}
