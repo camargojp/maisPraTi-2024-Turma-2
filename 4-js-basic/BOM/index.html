@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOM - Browser Object Model</title>
+    <script>
+      let myWindow;
+
+      function openWin() {
+        myWindow = window.open("", "myWindow", "width=200, height=100");
+        myWindow = window.write("<p>Nova janela aberta!</p>");
+      }
+
+      function closeWin() {
+        if (myWindow) {
+          myWindow.close();
+        }
+      }
+
+      function changeText() {
+        setTimeout(() => {
+          document.getElementById("texto").innerHTML =
+            "Texto alterado após 3 segundos!";
+        }, 3000);
+      }
+
+      let contador
+
+      let i = 10
+
+      function startCounter() {
+        contador = setInterval(() => {
+            document.getElementById("contador").innerHTML = i
+            i--
+            if(i < 0) {
+                clearInterval(contador)
+                document.getElementById("contador").innerHTML = "Contagem finalizada!"
+            }
+        }, 1000)
+      }
+
+      function stopCounter() {
+        clearInterval(contador)
+      }
+
+      function goBack () {
+        window.history.back()
+      }
+
+      function goForward () {
+        window.history.forward()
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="openWin()">Abrir Janela</button>
+    <button onclick="closeWin()">Fechar Janela</button>
+    <button onclick="window.print()">Imprimir Janela</button>
+
+    <button onclick="redirectTo('http://www.google.com')">
+      Acessar Google
+    </button>
+
+    <h2 id="texto">Texto Original</h2>
+
+    <button onclick="changeText()">Alterar Texto após 3 segundos</button>
+    <h2 id="contador">Contagem não iniciada</h2>
+    <button onclick="startCounter()">Iniciar Contador</button>
+    <button onclick="stopCounter()">Parar Contador</button>
+    <button onclick="goBack()">Voltar</button>
+    <button onclick="goForward()">Avançar</button>
+  </body>
+</html>
