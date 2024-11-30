@@ -85,12 +85,12 @@
   
 .swiper-button-next,
 .swiper-button-prev {
-    color: var(--tema) !important;
+    color: #fff !important;
     font-size: 1.5rem;
 }
   
 .swiper-pagination-bullet-active {
-    background-color: var(--tema) !important;
+    background-color: #fff !important;
 }
 
 
@@ -197,6 +197,139 @@ header {
     justify-content: center;
 }
 
+/* Slide Caption Centralizado */
+.slide-caption {
+    position: absolute; /* Mantenha no topo da camada */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+    background: rgba(0, 0, 0, 0.5); /* Fundo para legibilidade */
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    max-width: 90%; /* Evita ultrapassar a largura em telas pequenas */
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .banner-principal {
+        height: 80vh; /* Reduz a altura do banner */        
+    }
+
+    .slide-caption {
+        padding: 15px; /* Reduz o padding */
+        top: 70% !important; /* Ajusta a posição central relativa */
+        transform: translate(-50%, -45%); /* Compensa a centralização */
+    }
+
+    .slide-caption h2 {
+        font-size: 1.8rem; /* Reduz o tamanho do título */
+    }
+
+    .slide-caption p {
+        font-size: 1rem !important; /* Ajusta o texto descritivo */
+    }
+
+    .slide-caption a {
+        font-size: 0.9rem !important;
+        padding: 10px 15px !important; /* Reduz o tamanho do botão */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-principal {
+        height: 70vh !important; /* Altura ainda menor para telas muito pequenas */
+    }
+
+    .slide-caption {
+        padding: 10px; /* Padding mais compacto */
+        top: 70% !important; /* Centraliza mais alto para telas menores */
+        transform: translate(-50%, -40%);
+    }
+
+    .slide-caption h2 {
+        font-size: 1.5rem; /* Título menor */
+    }
+
+    .slide-caption p {
+        font-size: 0.8rem; /* Texto menor */
+    }
+
+    .slide-caption a {
+        font-size: 0.8rem;
+        padding: 8px 12px; /* Botão mais compacto */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-principal {
+        height: 80vh; /* Reduz a altura do banner */
+    }
+
+    .swiper-slide {
+        flex-direction: column; /* Garante alinhamento vertical */
+    }
+
+    .slide-caption {
+        bottom: 10%; /* Reposiciona o caption */
+        padding: 15px; /* Reduz o padding */
+        font-size: 0.9rem; /* Ajusta o tamanho do texto */
+        max-width: 100% !important; /* Expande o texto para evitar cortes */
+    }
+
+    .slide-caption h2 {
+        font-size: 1.8rem; /* Reduz o tamanho do título */
+    }
+
+    .slide-caption p {
+        font-size: 1rem; /* Reduz o texto descritivo */
+    }
+
+    .slide-caption a {
+        font-size: 0.9rem;
+        padding: 10px 15px; /* Reduz o tamanho do botão */
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        font-size: 25px; /* Reduz o tamanho dos botões */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-principal {
+        height: 70vh; /* Ainda menor para telas muito pequenas */
+    }
+
+    .slide-caption {
+        bottom: 5%; /* Deixa o caption mais próximo do rodapé */
+        padding: 10px; /* Reduz ainda mais o padding */
+    }
+
+    .slide-caption h2 {
+        font-size: 1.5rem; /* Reduz o título em telas menores */
+    }
+
+    .slide-caption p {
+        font-size: 0.8rem; /* Texto menor */
+    }
+
+    .slide-caption a {
+        font-size: 0.8rem;
+        padding: 8px 12px; /* Botão mais compacto */
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        font-size: 20px; /* Botões menores */
+    }
+}
+
+
+
 /* Títulos das Sections */
 .section-title {
     position: relative;
@@ -229,8 +362,13 @@ header {
 
 /* Sobre */
 
+[data-aos] {
+    overflow: hidden; /* Impede que os elementos projetem-se além dos limites */
+}
+
 #sobre {
     background-color: #ebeaea !important;
+    overflow: hidden;
   }
   
 #sobre h2 {
@@ -317,6 +455,32 @@ header {
 
 .price {
     color: var(--tema) !important;
+}
+
+/* Garanta que o texto e o preço ocupem o espaço proporcional */
+h5.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Evita a quebra de linha */
+    font-size: 1rem; /* Ajuste o tamanho do texto */
+}
+
+h5.d-flex span {
+    white-space: nowrap; /* Garante que o texto não quebre */
+    text-overflow: ellipsis; /* Adiciona reticências, se necessário */
+    overflow: hidden; /* Esconde o excesso de texto */
+}
+
+@media (max-width: 768px) {
+    h5.d-flex {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte para telas menores */
+    }
+
+    .price {
+        margin-left: auto; /* Move o preço para o final */
+        font-weight: bold;
+    }
 }
 
 /* Testemunhos */
