@@ -48,4 +48,3 @@ backToTopButton.onclick = function() {
       behavior: "smooth"
     });
 };
-
