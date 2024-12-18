@@ -311,18 +311,177 @@
 
 //Imprimir o valor máximo no Array
 
+//public class Main {
+//    public static void main(String[] args) {
+//      int[] numbers = {41, 3, 18, 50, 9, 4, 2};
+//
+//      int maxValue = numbers[0];
+//
+//      for (int i = 1; i < numbers.length; i++) {
+//          if (numbers[i] > maxValue) {
+//              maxValue = numbers[i];
+//          }
+//      }
+//
+//        System.out.println("Valor máximo no array: " + maxValue);
+//    }
+//}
+
+//Soma dos elementos do Array
+
+//public class Main {
+//    public static void main (String[] args) {
+//        int[] numbers = {1, 5, 10, 34, 7};
+//
+//        int sum = 0;
+
+//        for (int j = 0; j < numbers.length; j++) {
+//            sum += numbers[j];
+//        }
+//        System.out.println("Soma do array: " + sum);
+//    }
+//}
+
+//Revertendo o Array
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int[] vetor = new int[5];
+//
+//        vetor[0] = 1;
+//        vetor[1] = 2;
+//        vetor[2] = 3;
+//        vetor[3] = 4;
+//        vetor[4] = 5;
+//
+//        int start = 0;
+//        int end = vetor.length - 1;
+//
+//        while (start < end) {
+//            int temp = vetor[start];
+//
+//            vetor[start] = vetor[end];
+//
+//            vetor[end] = temp;
+//
+//            start++;
+//            end--;
+//        }
+//
+//        System.out.println("Array 'vetor' invertido: ");
+//        for (int j = 0; j < vetor.length; j++) {
+//            System.out.println("Elemento na posição " + j + ": " + vetor[j]);
+//        }
+//    }
+
+
+//Adicionar um elemento a um Array
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int[] vetor = new int[5];
+//
+//        vetor[0] = 1;
+//        vetor[1] = 2;
+//        vetor[2] = 3;
+//        vetor[3] = 4;
+//        vetor[4] = 5;
+//
+//        int[] newArray = new int[vetor.length + 1];
+//
+//        for (int j = 0; j < vetor.length; j++) {
+//            newArray[j] = vetor[j];
+//        }
+//
+//        newArray[vetor.length] = 1;
+//    }
+//}
+
+//Remover um elemento de um Array
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int[] vetor = new int[5];
+//
+//        vetor[0] = 1;
+//        vetor[1] = 2;
+//        vetor[2] = 3;
+//        vetor[3] = 4;
+//        vetor[4] = 5;
+//
+//        int countRemocao = 0;
+//
+//        for (int j = 0; j < vetor.length; j++) {
+//            if(vetor[j] != 5) {
+//                countRemocao++;
+//            }
+//        }
+//
+//        int[] newArrayRemocao = new int[countRemocao];
+//
+//        int index = 0;
+//
+//        for (int j = 0; j < newArrayRemocao.length; j++) {
+//            if (vetor[j] != 5) {
+//                newArrayRemocao[index] = vetor[j];
+//                index++;
+//            }
+//        }
+//
+//        System.out.println("Array após remoção: ");
+//        for (int j = 0; j < newArrayRemocao.length; j++) {
+//            System.out.println("Elemento na posição "+ j + ": " + newArrayRemocao[j]);
+//        }
+//    }
+//}
+
+//Somar a diagonal principal e secundária da matriz
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int[][] matriz = {
+//                {10, 20, 30},
+//                {40, 50, 60},
+//                {70, 80, 90}
+//        };
+//
+//        int somaDiagPrincipal = 0;
+//        int somaDiagSecundaria = 0;
+//
+//        int n = matriz.length;
+//
+//        for (int i = 0; i < n; i++) {
+//            somaDiagPrincipal += matriz[i][i];
+//            somaDiagSecundaria += matriz[i][n - 1 - i];
+//        }
+//        System.out.println("Soma da diagonal principal: " + somaDiagPrincipal);
+//        System.out.println("Soma da diagonal secundária: " + somaDiagSecundaria);
+//    }
+//}
+
+//Rotacionar a matriz 90 graus
+
 public class Main {
     public static void main(String[] args) {
-      int[] numbers = {41, 3, 18, 50, 9, 4, 2};
+        int[][] matriz = {
+                {10, 20, 30},
+                {40, 50, 60},
+                {70, 80, 90}
+        };
 
-      int maxValue = numbers[0];
-
-      for (int i = 1; i < numbers.length; i++) {
-          if (numbers[i] > maxValue) {
-              maxValue = numbers[i];
-          }
-      }
-
-        System.out.println("Valor máximo no array: " + maxValue);
+        int n = matriz.length;
+        int[][] rotacionada = new int [n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                rotacionada[j][n - 1 - i] = matriz[i][j];
+            }
+        }
+        System.out.println("Matriz rotacionada 90 graus: ");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(rotacionada[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
