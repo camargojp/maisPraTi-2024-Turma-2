@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MaisPraTi.iml" filepath="$PROJECT_DIR$/.idea/MaisPraTi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/5-java/logic/logic.iml" filepath="$PROJECT_DIR$/5-java/logic/logic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaisPraTi.iml" filepath="$PROJECT_DIR$/MaisPraTi.iml" />
     </modules>
   </component>
 </project>
