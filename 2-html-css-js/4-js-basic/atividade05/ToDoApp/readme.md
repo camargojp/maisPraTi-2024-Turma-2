@@ -33,7 +33,7 @@ Para executar este projeto, você precisará de um navegador moderno, como Googl
 2. **Navegue até a pasta do projeto:**
 
     ```bash
-    cd 4-js-basic/atividade05/ToDoApp
+    cd 2-html-css-js\4-js-basic\atividade05\ToDoApp
 3. **Abra o arquivo index.html no navegador**
 
     Não há necessidade de um servidor web, pois o projeto funciona diretamente no navegador.
