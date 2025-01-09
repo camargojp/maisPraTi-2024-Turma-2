@@ -77,7 +77,7 @@ O projeto foi implantado na plataforma **Vercel** e pode ser acessado pelo link 
 2. Navegue até a pasta do projeto:
 
    ```bash
-    cd 2-html-css-js\4-js-basic\atividade04\commit"&"eat
+    cd 2-html-css-js/4-js-basic/atividade04/commit"&"eat
 3. Abra o arquivo index.html no navegador.
 
 ## **API Utilizada**
