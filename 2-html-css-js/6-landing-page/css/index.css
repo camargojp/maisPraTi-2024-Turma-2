@@ -159,6 +159,8 @@ header {
     height: 60px;
     top: 50%;
     left: 60%;
+    z-index: 100;
+    background-color: red;
 }
 
 .swiper .swiper-button-next {
@@ -168,6 +170,7 @@ header {
     width: 60px;
     height: 60px;
     z-index: 100;
+    background-color: blue;
 }
 
 .swiper .swiper-button-prev::after, 
@@ -181,6 +184,10 @@ header {
     line-height: 0;
     background: transparent;
     border-radius: 50%;
+}
+
+.modal {
+    display: none;
 }
 
 .right {
