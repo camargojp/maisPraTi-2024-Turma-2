@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Gaming Website Landing Page</title>
+</head>
+
+<body>
+    <header>
+        <a href="" class="logo">
+            <img src="images/nintendo-switch.png" alt="nintendo switch logo" height="240" width="240" />
+        </a>
+        <a href="#" class="menu" id="burger-menu"><ion-icon name="grid-outline"></ion-icon></a>
+        <nav>
+            <ul class="nav">
+                <li><a href="https://www.nintendo.com/us/whatsnew/" target="_blank">Switch News</a></li>
+                <li><a href="https://www.nintendo.com/pt-br/switch/online/" target="_blank">Switch Online</a></li>
+                <li><a href="https://www.nintendo.com/us/switch/online/nintendo-switch-online/classic-games/"
+                target="_blank">Switch Classic</a></li>
+                <li><button class="login-btn" id="login-btn"><ion-icon name="person"></ion-icon> Iniciar Sessão</button></li>
+            </ul>
+        </nav>
+        
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Login</h2>
+                <form>
+                    <div class="form-group">                        
+                        <label for="username">
+                            <ion-icon name="person"></ion-icon> Usuário:
+                        </label>
+                        <input type="text" id="username" name="username" required placeholder="Digite seu usuário">
+                    </div>
+                    <div class="form-group">                        
+                        <label for="password">
+                            <ion-icon name="lock-closed"></ion-icon> Senha:
+                        </label>
+                        <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+                    </div>
+                    <button type="submit" class="btn-submit">Entrar</button>
+                </form>
+
+                <div class="password-recovery">
+                    <a href="#">Esqueceu sua senha?</a>
+                </div>
+                
+                <hr>
+                        
+                <div class="create-account">
+                    <p>Não tem uma conta? <a href="#">Crie uma</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="search">
+            <input type="text" id="gameInput" placeholder="Search"><ion-icon name="search-outline"
+                id="searchIcon"></ion-icon>
+        </div>
+    </header>
+
+    <main>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <section class="swiper-slide" id="slide-1">
+                    <img src="images/super_mario_odyssey_dinosaur_4k.jpeg" alt="Banner do Super Mario Odyssey">
+                    <div class="backscene"></div>
+                    <div class="banner">
+                        <div class="left">
+                            <div class="features">
+                                <div class="rating">
+                                    <span class="score">9.2</span>
+                                    <div class="content">
+                                        <span class="subtitle">M E T A S C O R E</span>
+                                        <h4>Ótimo</h4>
+                                        <span class="resume">Em Super Mario Odyssey, Mario viaja pelo mundo com seu aliado Cappy para resgatar Peach de Bowser. O jogo apresenta ambientes abertos, onde Mario pode possuir inimigos usando seu chapéu. A exploração é divertida e cheia de quebra-cabeças. Uma aventura vibrante e inovadora para os fãs da franquia.</span>
+                                    </div>
+                                </div>
+                                <div class="pricing">
+                                    <a href="https://www.nintendo.com/pt-br/store/products/super-mario-odyssey-switch/"
+                                    target="_blank" class="button"><ion-icon name="add-circle-outline"></ion-icon></a>
+                                    <div class="content">
+                                        <span class="subtitle">Super Mario Odyssey</span>
+                                        <h4>COMPRE AGORA</h4>
+                                        <span>Plataforma, Aventura, Ação</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1>Mario</h1>
+                        </div>
+                        <img src="images/mario.png" alt="Mario">
+                        <div class="right">
+                            <ul class="description">
+                                <li>
+                                    <h4>
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                        Data de Lançamento
+                                    </h4>
+                                    <p>27 de Outubro de 2017</p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                        Modos de Jogo
+                                    </h4>
+                                    <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
+                                </li>
+                            </ul>
+
+                            <div class="trailer">
+                                <h2>Assista ao Trailer</h2>
+                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/5kcdRBHM7kM"
+                                title="Super Mario Odyssey Trailer" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="swiper-slide" id="slide-2">
+                    <img src="images/pokemon-legends-arceus.jpeg" alt="Banner do Pokémon Legends: Arceus">
+                    <div class="backscene"></div>
+                    <div class="banner">
+                        <div class="left">
+                            <div class="features">
+                                <div class="rating">
+                                    <span class="score">8.3</span>
+                                    <div class="content">
+                                        <span class="subtitle">M E T A S C O R E</span>
+                                        <h4>Bom</h4>
+                                        <span class="resume">Pokémon Legends: Arceus traz uma experiência inédita com mundo aberto e captura de Pokémon em tempo real. Ambientado no passado de Sinnoh, você deve criar o primeiro Pokédex da região e desvendar os mistérios de Arceus. Um novo estilo de jogo para a série Pokémon.</span>
+                                    </div>
+                                </div>
+                                <div class="pricing">
+                                    <a href="https://www.nintendo.com/pt-br/store/products/pokemon-legends-arceus-switch/"
+                                        target="_blank" class="button"><ion-icon
+                                            name="add-circle-outline"></ion-icon></a>
+                                    <div class="content">
+                                        <span class="subtitle">Pokémon Legends</span>
+                                        <h4>COMPRE AGORA</h4>
+                                        <span>Ação, RPG</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1 class="pokemon-title">Pokémon</h1>
+                        </div>
+                        <img src="images/red.png" alt="Treinador Pokemon Red" class="pokemon">
+                        <div class="right">
+                            <ul class="description">
+                                <li>
+                                    <h4>
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                        Data de Lançamento
+                                    </h4>
+                                    <p>28 de Janeiro de 2022</p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                        Modos de jogo
+                                    </h4>
+                                    <p>Modo TV, Modo Semiportátil, Portátil</p>
+                                </li>
+                            </ul>
+
+                            <div class="trailer">
+                                <h2>Assista ao Trailer</h2>
+                                <iframe width="1280" height="720"
+                                    src="https://www.youtube.com/embed/wOEHUANP-vo?si=JgqPb7KmSHNeHKsD"
+                                    title="Pokémon Legends: Arceus Trailer" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="swiper-slide" id="slide-3">
+                    <img src="images/The-Legend-of-Zelda-Breath-of-the-Wild.jpeg"
+                    alt="Banner The legend of Zelda Breath of the Wild">
+                    <div class="backscene"></div>
+                    <div class="banner">
+                        <div class="left">
+                            <div class="features">
+                                <div class="rating">
+                                    <div class="score">9.7</div>
+                                    <div class="content">
+                                        <span class="subtitle">M E T A S C O R E</span>
+                                        <h4>Excelente</h4>
+                                        <span class="resume">
+                                            Em Breath of the Wild, Link explora Hyrule em um mundo aberto para derrotar Ganon. O jogo traz combate, puzzles e mecânicas de sobrevivência, com liberdade total de exploração. Uma reinvenção épica da franquia Zelda.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="pricing">
+                                    <a href="https://www.nintendo.com/pt-br/store/products/the-legend-of-zelda-breath-of-the-wild-switch/"
+                                    target="_blank" class="button"><ion-icon name="add-circle-outline"></ion-icon></a>
+                                    <div class="content">
+                                        <span class="subtitle">The Legend of Zelda: Breath of the Wild</span>
+                                        <h4>COMPRE AGORA</h4>
+                                        <span>Aventura, Ação, RPG</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <h1>Zelda</h1>
+                        </div>
+                        <img src="images/link.png" alt="Personagem Link">
+                        <div class="right">
+                            <ul class="description">
+                                <li>
+                                    <h4>
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>Data de Lançamento
+                                    </h4>
+                                    <p>3 de Março de 2017</p>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                        Modos de Jogo
+                                    </h4>
+                                    <p>Modo TV, Modo Semiportátil, Portátil</p>
+                                </li>
+                            </ul>
+
+                            <div class="trailer">
+                                <h2>Assista ao Trailer</h2>
+                                <iframe width="1280" height="720"
+                                    src="https://www.youtube.com/embed/zw47_q9wbBE?si=FA-tH2Fsh8iE7M91"
+                                    title="The legend of Zelda: Breath of the Wild Trailer" allowfullscreen
+                                    frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </main>
+    <footer>
+        <ul class="social-media">
+            <li>
+                <a href="https://github.com/camargojp" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+            </li>
+            <li>
+                <a href="https://br.linkedin.com/in/joaop-camargo" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+            <li>
+                <a href="#"><ion-icon name="add-outline"></ion-icon></a>
+            </li>
+            <li><ion-icon name="mail-outline" id="openEmailModal"></ion-icon></li>
+
+            <div id="emailModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">X</span>
+                    <h2>Entre em Contato</h2>
+                    <form id="emailForm">
+                        <div class="form-group">
+                            <label for="nome">Nome: </label>
+                            <input type="text" id="nome" name="nome" class="form-group" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail: </label>
+                            <input type="email" id="email" name="email" class="form-group" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Deixe sua Mensagem: </label>
+                            <textarea name="mensagem" id="mensagem" rows="4" class="form-group" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Enviar</button>
+                    </form>
+
+                    <img src="images/pokemons.gif" alt="GIF pokemons tipo fantasma" class="pokemon-gif">
+                    <img src="images/charizard-pokemon.gif" alt="GIF do Charizard" class="charizard-gif">
+                    <img src="images/mario-runner.gif" alt="GIF super mário" class="mario-gif">
+                        
+                </div>
+
+            </div>
+        </ul>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

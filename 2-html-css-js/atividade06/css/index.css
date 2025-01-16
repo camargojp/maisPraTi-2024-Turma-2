@@ -1,0 +1,970 @@
+@import url("//db.onlinewebfonts.com/c/3066b11123e63381b8e2aa554b18bf32?family=Bauhaus+93+V1");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ff0000;
+}
+
+body {
+    position: relative;
+    background-color: #000000;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 20;
+}
+
+.login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;    
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-left: 120px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+}
+
+
+.login-btn ion-icon {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.login-btn:hover {
+    background-color: var(--primary);
+    transform: scale(1.05);
+}
+
+form .form-group ion-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.password-recovery a, .create-account a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.password-recovery a:hover, .create-account a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.logo img {
+    max-width: 60px;
+    max-height: 60px;
+    filter: invert(1);
+    transition: transform 0.5s ease;
+}
+
+.logo:hover img {
+    transform: rotate(540deg) scale(1.2);
+    transition: transform 0.5s ease;
+}
+
+.menu {
+    color: #ffffff;
+    font-size: 2em;
+    display: none;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;    
+}
+
+.nav li {
+    list-style-type: none;
+    margin: 0 20px;
+}
+
+.nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav li:hover a {
+    color: var(--primary);
+}
+
+.search {
+    position: relative;
+    width: 130px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+.search:hover {
+    width: 300px;
+}
+
+.search input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    border-radius: 4px;
+    padding: 0 10px 0 5px;    
+}
+
+.search input::placeholder {
+    color: #ffffff;
+    text-transform: uppercase;
+    transform: translateX(5px);
+    font-weight: 300;
+}
+
+.search ion-icon {
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    padding-left: 10px;
+    border-left: 1 px solid rgba(255, 255, 255, 0.5);
+}
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper .swiper-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-wrapper .swiper-slide::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.swiper .swiper-wrapper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 10px 0;
+    overflow: hidden;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner img {
+    position: absolute;
+    max-width: 700px;
+    transform: translateX(-50%);
+    z-index: 1;
+    left: 50%;
+}
+
+.swiper .swiper-wrapper .swiper-slide .backscene {
+    position: absolute;
+    content: "";
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    width: 720px;
+    height: 720px;
+    border-radius: 50%;
+}
+
+.swiper .swiper-pagination {
+    max-height: 20px;
+    position: absolute;    
+    left: 30% !important;
+    top: 40% !important;
+    z-index: 10;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 10;
+}
+
+.swiper .swiper-pagination 
+.swiper-pagination-bullet-active {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.swiper .swiper-button-prev {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 40%;
+    left: 85%;
+    z-index: 100;    
+}
+
+.swiper .swiper-button-next {
+    position: absolute;
+    right: 7%;
+    top: 40%;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);    
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 0;
+    background: transparent;
+    backdrop-filter: blur(30px);    
+}
+
+.swiper .swiper-button-next:hover,
+.swiper .swiper-button-prev:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+.left {
+    margin-left: 100px;
+}
+
+.right {
+    margin-right: 100px;
+}
+
+.banner img {
+    max-width: 790px;
+    max-height: 790px;
+    width: 50%;
+    height: 50%;
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.resume {
+    text-align: justify;
+    z-index: 10;
+} 
+
+.banner .left .features {
+    max-width: 400px;
+    margin-bottom: 100px;
+}
+
+.banner .left .features .rating {
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.banner .left .features .rating .score {
+    padding: 15px;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--primary);
+    background: #ffffff;
+}
+
+.banner .left .features .content {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.banner .left .features .pricing {
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner .left .features .pricing ion-icon {
+    padding: 15px;
+    font-size: 3em;
+    font-weight: 400;
+    color: #ffffff;
+    background: rgb(156, 3, 3);
+}
+
+.banner .left .features .pricing ion-icon:hover {
+    background: var(--primary);
+  }
+
+.banner .left .features .content h4 {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.banner .left .features .content span {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.banner .left .features .content .subtitle {
+    color: var(--primary);
+}
+
+.banner h1 {
+    color: #ffffff;
+    font-size: 5em;
+    letter-spacing: 5px;
+    line-height: 0.9;
+    z-index: 10;
+    text-transform: uppercase;
+    font-family: "Bauhaus 93";
+}
+
+.swiper .swiper-wrapper .swiper-slide .banner .right {
+    position: relative;
+    height: 100vh;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 100;
+}
+
+.banner .right .description {
+    padding: 30px 60px 0 0;
+    color: #ffffff;
+}
+
+.banner .right .description li {
+    list-style: none;
+}
+
+.banner .right .description h4 {
+    display: inline-block;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.banner .right .description h4 ion-icon {
+    margin-right: 10px;
+  }
+
+.banner .right .description p {
+    margin: 5px 0 25px 30px;
+    font-weight: 300;
+}
+
+.banner .right h2 {
+    color: #ffffff;
+    font-size: 3.5em;
+    line-height: 1em;
+    font-weight: 400;
+    text-align: right;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.banner .right iframe {
+    max-width: 450px;
+    max-height: 250px;
+}
+
+.social-media {
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.social-media ion-icon {
+    color: #ffffff;
+    font-size: 2.5em;
+    transition: 0.2s;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+.social-media li {
+    list-style: none;
+}
+  
+.social-media ion-icon:hover {
+    color: var(--primary);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888888;
+    width: 70%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.modal-content h2 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.close {
+    color: #000000;
+    font-size: 32px;
+    font-weight: bold;
+    float: right;
+}
+
+.close:hover,
+.close:focus {
+  transform: scale(1.3);
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+  }
+  
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+  }
+  
+.btn-submit {
+    background-color: #3a883c;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+ }
+  
+.btn-submit:hover {
+    background-color: #52b957;
+}
+  
+.pokemon-gif {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 400px;
+    height: auto;   
+}
+  
+.charizard-gif {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    width: 400px;
+    height: auto;    
+}
+  
+.mario-gif {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 180px;
+    height: auto;   
+    animation: moveRight 3s linear infinite;
+}
+
+@keyframes moveRight {
+    from {
+      left: 15px;
+    } to {
+      left: calc(100% - 115px);
+    }
+}
+
+/* Media queries*/
+
+/*Smartphones */
+@media (max-width: 767px) {
+    .menu {
+        display: block;
+        padding-left: 40px;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        padding: 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .nav.open {
+        display: flex;
+        align-items: start;
+    }
+
+    .nav li {
+        margin: 15px 0;
+    }
+    
+    .nav li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    header {
+        padding: 25px 10px;
+    }
+
+    .logo img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .search {
+        width: 130px;        
+    }
+
+    .search:hover {
+        width: 180px;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner {
+        padding: 10px;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner img {
+        max-width: 55%;
+        max-height: 25%;
+        margin-bottom: 250px;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .backscene {
+        display: none;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .left {
+        margin-left: 0px;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .right {
+        position: relative;
+        height: 100vh;
+        max-width: 650px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        z-index: 100;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner h1 {
+        font-size: 3.2em;
+        margin-left: 70px;
+        width: 100%;
+    }
+
+    .banner .left h1 {
+        position: absolute;
+        display: flex;
+        top: 150px;
+        left: 50px;
+        font-size: 2em;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .pokemon-title {
+        font-size: 2em;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .right .description {
+        display: none;
+    }
+
+    .banner .left .features {
+        display: none;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .right h2 {
+        font-size: 1.5em;
+        width: 280px;
+        bottom: 400px;
+        left: 85px;
+        display: flex;
+        position: absolute;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .right iframe {
+        max-width: 250px;
+        max-height: 180px;
+        margin-top: 285px;
+        position: relative;
+        float: right;
+        margin-left: 75px;
+    }
+
+    .swiper .swiper-pagination {        
+        max-height: 20px;
+        left: 0% !important;
+        top: 95% !important;
+        z-index: 10;
+    }
+
+    .swiper .swiper-pagination .swiper-pagination-bullet-active {
+        background: rgba(255, 255, 255, 0.5);
+    }   
+
+    .swiper .swiper-button-prev {
+        left: 0%;
+        top: 68%;
+        font-size: 5px;
+    }
+
+    .swiper .swiper-button-next {
+        right: 0%;
+        top: 68%;
+    }
+
+    .modal-content {
+        margin: 40% auto;
+    }
+
+    .charizard-gif {
+        max-width: 180px;
+        max-height: 180px;
+        top: 5%;
+        left: 10px;
+    }
+
+    .pokemon-gif {
+        position: absolute;
+        max-width: 200px;
+        max-height: 200px;
+        top: 67%;
+        left: 45%;
+    }
+
+    .mario-gif {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .social-media {
+        left: 80px;
+        bottom: 100px;
+    }
+}
+
+/* Media queries para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .menu {
+        display: block;
+        padding-left: 120px;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        padding: 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .nav.open {
+        display: flex;
+        align-items: start;
+    }
+
+    .nav li {
+        margin: 15px 0;
+    }
+    
+    .nav li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    header {
+        padding: 25px 20px;
+    }
+
+    .logo img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .search {
+        width: 180px;        
+    }
+
+    .search:hover {
+        width: 230px;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner {
+        padding: 15px;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner img {
+        max-width: 45%;
+        max-height: 35%;
+        margin-bottom: 200px;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .backscene {
+        position: absolute;
+        content: "";
+        top: 23%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: transparent;
+        box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .left {
+        margin-left: 5px;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .right {
+        position: relative;
+        height: 100vh;
+        max-width: 650px;
+        display: flex;        
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        z-index: 100;
+    }        
+
+    .swiper .swiper-wrapper .swiper-slide .banner h1 {
+        font-size: 2.8em;
+        margin-left: 210px;
+        width: 100%;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .pokemon {
+        max-height: 50%;
+        top: 200px;
+    }
+
+    .trailer {
+        padding-right: 200px;
+    }
+
+    .banner .left h1 {
+        position: absolute;
+        display: flex;
+        top: 150px;
+        left: 80px;
+        font-size: 1.8em;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .pokemon-title {
+        font-size: 2.2em;
+        left: 70px;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .right .description {
+        display: block;
+        padding-right: 165px;
+        font-size: 0.8em;        
+    }
+
+    .banner .left .features {
+        display: block;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .right h2 {
+        font-size: 1.5em;
+        width: 200px;
+        bottom: 380px;
+        right: 200px;
+        display: flex;
+        position: absolute;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner .right iframe {        
+        float: right;       
+    }
+
+    .swiper .swiper-pagination {        
+        max-height: 25px;
+        left: 0% !important;
+        top: 95% !important;
+        z-index: 10;
+    }
+
+    .swiper .swiper-pagination .swiper-pagination-bullet-active {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    .swiper .swiper-button-prev {
+        left: 0%;
+        top: 70%;
+        font-size: 6px;
+    }
+
+    .swiper .swiper-button-next {
+        right: 0%;
+        top: 70%;
+    }
+
+    .modal-content {
+        margin: 30% auto;
+    }
+
+    .charizard-gif {
+        max-width: 160px;
+        max-height: 160px;
+        top: 10%;
+        left: 20px;
+    }
+
+    .pokemon-gif {
+        position: absolute;
+        max-width: 250px;
+        max-height: 250px;
+        top: 60%;
+        left: 10px;
+    }   
+
+    .mario-gif {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .social-media {
+        left: 250px;
+        bottom: 60px;
+    }
+}
