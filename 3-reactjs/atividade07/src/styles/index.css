@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;  
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px; /* Adicionando espaçamento nas opções do menu */
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+}
+
+.container p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.container button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input {
+  margin: 10px;
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Em telas pequenas, exibe o menu de forma vertical */
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 10px 0; /* Espaçamento entre os itens no menu */
+  }
+
+  nav ul li a {
+    padding: 10px 20px; /* Ajuste o padding para ficar mais confortável em telas menores */
+    width: 100%; /* Faz as opções de menu preencherem toda a largura */
+    text-align: center;
+  }
+}
